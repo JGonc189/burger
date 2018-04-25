@@ -1,21 +1,21 @@
 // Node Dependencies
-const express = require('express');
-const router = express.Router();
-const burger = require('../models/burger.js');
+var express = require('express');
+var router = express.Router();
+var burger = require('../models/burger.js');
 
 
 // Create routes
 // ----------------------------------------------------
 // Index Redirect
-router.get('/', (req, res) => {
+router.get('/', function (req, res) {
   res.redirect('/index');
 });
 
 
 // Index Page (render all burgers to DOM)
-router.get('/index', (req, res) => {
-  burger.selectAll((data) => {
-    const hbsObject = { burgers: data };
+router.get('/index', function (req, res) {
+  burger.selectAll(function(data) {
+    var hbsObject = { burgers: data };
     //console.log(hbsObject);
     res.render('index', hbsObject);
   });
@@ -23,16 +23,16 @@ router.get('/index', (req, res) => {
 
 
 // Create a New Burger
-router.post('/burger/create', (req, res) => {
-  burger.insertOne(req.body.burger_name, () => {
+router.post('/burger/create', function (req, res) {
+  burger.insertOne(req.body.burger_name, function() {
     res.redirect('/index');
   });
 });
 
 
 // Devour a Burger
-router.post('/burger/eat/:id', (req, res) => {
-  burger.updateOne(req.params.id, () => {
+router.post('/burger/eat/:id', function (req, res) {
+  burger.updateOne(req.params.id, function() {
     res.redirect('/index');
   });
 });
