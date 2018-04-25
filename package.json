@@ -1,0 +1,27 @@
+{
+  "name": "eat-the-burger",
+  "version": "1.0.0",
+  "description": "Lets users input the names of burgers they'd like to eat. Whenever a user submits a burger's name, the app will display the burger on the left side of the page waiting to be devoured. Each burger in the waiting area also has a Devour it! button. When the user clicks it, the burger will move to the right side of the page. ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JGonc189/burger.git"
+  },
+  "author": "Jason M. Goncalves",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JGonc189/burger/issues"
+  },
+  "homepage": "https://github.com/JGonc189/burger#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.10",
+    "mysql": "^2.15.0"
+  }
+}
