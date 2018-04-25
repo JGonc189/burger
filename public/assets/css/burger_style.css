@@ -1,0 +1,17 @@
+/*@author: Thomas Thompson
+@github: tomtom28
+@comment: Homework 14 - Eat the Burger!*/
+
+
+
+body {
+  background-color: #f0f0f0;
+}
+
+img {
+  width: 15%;
+}
+
+.new_burger {
+  color: #3e3e30;
+}
